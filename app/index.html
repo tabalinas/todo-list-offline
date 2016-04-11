@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List Offline - ServiceWorker Showcase</title>
+</head>
+<body>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('scripts/sw.js').then(function(sw) {
+            console.log("service worker registered");
+        }).catch(function() {
+            console.log("service worker registration failed");
+        });
+    }
+</script>
+</body>
+</html>
